@@ -1,0 +1,75 @@
+
+<div class="row">
+		<div class="col-sm-8">
+			<div class="row" >
+				<div class="imageJumbotron">
+					<h1>Welcome to  My Video Games List!</h1>
+					<p class="lead">Designed to keep track of your games that you play!</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="panel panel-primary">
+				  <div class="panel-heading">
+					<h3 class="panel-title">Recent Reviews</h3>
+				  </div>
+				  <div class="panel-body">
+					<ul class="list-unstyled">
+						<li ng-repeat="review in reviews">
+							<div class="panel panel-default">
+								<div class="panel-heading"><a href="#/game?gameId={{review.GAMEID}}" >{{review.GAMENAME}}</a></div>
+								<div class="panel-body">
+									{{review.REVIEWTEXT}}
+									<div style="margin-top: 30px" class="row">
+									<div class="col-lg-6">
+									<span> By: <a href="#/user?userId={{review.ACCOUNTID}}" >{{review.USERNAME}}</a></span>
+									</div>
+									
+									<div class="col-lg-6">
+									<div style="float:right">
+
+									{{review.REVIEWDATE}}
+									</div>
+									</div>
+									
+								</div>
+							</div>
+						
+						</li>
+					</ul>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4 ">
+			<div class="panel panel-primary">
+			  <div class="panel-heading">
+				<h3 class="panel-title">Top Games</h3>
+			  </div>
+			  <div class="panel-body">
+				<ul class="list-unstyled">
+						<li ng-repeat="game in games">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<a href="#/game?gameId={{game.GAMEID}}">{{game.GAMENAME}}</a>
+								</div>
+								<div class="panel-body">
+									<div class="row">
+										<div class="col-lg-2">
+											<img src="{{game.IMAGEURL}}" style="width:36px;height:36px;">
+										</div>
+										<div class="col-lg-6">
+											<p>Average Rating: {{game.AVG_RATING}}</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+						</li>
+					</ul>
+			  </div>
+			</div>
+		</div>
+</div>
+
+
+

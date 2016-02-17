@@ -1,0 +1,62 @@
+<div class="row">
+	<div class="col-lg-12 text-center">
+		<h1>Game Browser</h1>
+		<p class="lead">Can't find a game? <a href="#/addGame">Add new game</a></p>
+		<ul class="pagination pagination-sm">
+			<li><a href="#/search">All</a></li>
+			<li><a href="#/search">#</a></li>
+			<li><a href="#/search?filter=A">A</a></li>
+			<li><a href="#/search?filter=B">B</a></li>
+			<li><a href="#/search?filter=C">C</a></li>
+			<li><a href="#/search?filter=D">D</a></li>
+			<li><a href="#/search?filter=E">E</a></li>
+			<li><a href="#/search?filter=F">F</a></li>
+			<li><a href="#/search?filter=G">G</a></li>
+			<li><a href="#/search?filter=H">H</a></li>
+			<li><a href="#/search?filter=I">I</a></li>
+			<li><a href="#/search?filter=J">J</a></li>
+			<li><a href="#/search?filter=K">K</a></li>
+			<li><a href="#/search?filter=L">L</a></li>
+			<li><a href="#/search?filter=M">M</a></li>
+			<li><a href="#/search?filter=N">N</a></li>
+			<li><a href="#/search?filter=O">O</a></li>
+			<li><a href="#/search?filter=P">P</a></li>
+			<li><a href="#/search?filter=Q">Q</a></li>
+			<li><a href="#/search?filter=R">R</a></li>
+			<li><a href="#/search?filter=S">S</a></li>
+			<li><a href="#/search?filter=T">T</a></li>
+			<li><a href="#/search?filter=U">U</a></li>
+			<li><a href="#/search?filter=V">V</a></li>
+			<li><a href="#/search?filter=W">W</a></li>
+			<li><a href="#/search?filter=X">X</a></li>
+			<li><a href="#/search?filter=Y">Y</a></li>
+			<li><a href="#/search?filter=Z">Z</a></li>
+		</ul>
+		<div class="row">
+			
+			<div ng-repeat="game in games" class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#/game?gameId={{game.GAMEID}}">
+                    <img class="img-responsive" src="{{game.IMAGEURL}}" style="width:400px;height:300px;">
+                </a>
+				{{game.GAMENAME}}
+            </div>
+		</div>
+	</div>
+</div>
+<div ng-show="showModal" class="modal fade">
+				<div class="modal-dialog">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&close;</button>
+					<h4 class="modal-title">Modal title</h4>
+				  </div>
+				  <div class="modal-body">
+					<p>One fine body…</p>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				  </div>
+				</div>
+				</div>
+			</div>

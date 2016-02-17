@@ -1,0 +1,48 @@
+<div class="row">
+	<div class="col-lg-6 col-lg-offset-3">
+        <form class="form-horizontal">
+		  <fieldset>
+			<legend>Add New Game</legend>
+			<div class="form-group">
+				<div class="col-lg-8 col-lg-offset-2">
+					<img ng-src="{{image}}" style="width:64px;height:64px;">
+				</div>
+			</div>
+			<div class="form-group">
+			  <label for="inputImage" class="col-lg-2 control-label">Image Url</label>
+			  <div class="col-lg-10">
+				<input type="text" class="form-control" ng-model="image" id="inputImage">
+			  </div>
+			</div>
+			<div class="form-group">
+			  <label for="inputName" class="col-lg-2 control-label">Game Name</label>
+			  <div class="col-lg-10">
+				<input type="text" class="form-control" ng-model="name" id="inputName">
+			  </div>
+			</div>
+			<div class="form-group">
+			  <label for="textArea" class="col-lg-2 control-label">Description</label>
+			  <div class="col-lg-10">
+				<textarea class="form-control" rows="3" ng-model="description" id="textArea"></textarea>
+			  </div>
+			</div>
+			<div class="form-group">
+			  
+			</div>
+			<div class="form-group">
+			  <div class="col-lg-4 col-lg-offset-2">
+				<button type="reset" ng-click="cancel()" class="btn btn-default">Cancel</button>
+				<button type="submit" ng-click="add()"class="btn btn-primary">Submit</button>
+			  </div>
+			  <label for="select" class="col-lg-2 control-label">Platform</label>
+			  <div class="col-lg-4">
+				<select class="form-control" ng-model="selectedPlatform" ng-options="platform as platform.PLATFORMNAME for platform in platforms track by platform.PLATFORMID">
+			  </div>
+			</div>
+		  </fieldset>
+		</form>    
+    </div>
+</div>
+
+
+
